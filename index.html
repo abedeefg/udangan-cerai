@@ -320,11 +320,45 @@
                 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
                     href="#">Contact Us</a>
             </nav>
-            <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Evently Management. All rights
+            <p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Evently Management. All rights
                 reserved.</p>
         </footer>
 
     </main>
+
+    <style>
+        .animate-spin-slow {
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Floating Music Player -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="music-toggle"
+            class="w-14 h-14 rounded-full bg-white shadow-xl flex items-center justify-center hover:scale-105 transition-all border border-surface-variant/50 group">
+            <span id="music-icon"
+                class="material-symbols-outlined text-secondary text-2xl group-hover:opacity-80 transition-opacity">music_off</span>
+            <!-- Spinning record effect ring -->
+            <div id="music-ring"
+                class="absolute inset-1 rounded-full border-2 border-dashed border-secondary/30 hidden animate-spin-slow">
+            </div>
+        </button>
+        <!-- Audio musik yang sudah ditambahkan oleh pengguna -->
+        <audio id="bg-audio" loop>
+            <source src="2.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+    </div>
 
     <script>
         const observerOptions = {
@@ -344,6 +378,43 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             el.style.animationPlayState = 'paused';
             observer.observe(el);
+        });
+
+        // Music Player Logic
+        const musicBtn = document.getElementById('music-toggle');
+        const bgAudio = document.getElementById('bg-audio');
+        const musicIcon = document.getElementById('music-icon');
+        const musicRing = document.getElementById('music-ring');
+        let isPlaying = false;
+        let isFirstPlay = true;
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgAudio.pause();
+                musicIcon.textContent = 'music_off';
+                musicRing.classList.add('hidden');
+                musicBtn.classList.remove('animate-spin-slow');
+            } else {
+                // Jika ini adalah putaran pertama, mulai dari detik reff
+                if (isFirstPlay) {
+                    // UBAH ANGKA 60 DI BAWAH INI sesuai dengan detik dimulainya reff lagu Anda
+                    bgAudio.currentTime = 60; 
+                    isFirstPlay = false;
+                }
+                bgAudio.play();
+                musicIcon.textContent = 'music_note';
+                musicRing.classList.remove('hidden');
+                musicBtn.classList.add('animate-spin-slow');
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Agar loop mengulang dari reff lagi (bukan dari awal)
+        bgAudio.addEventListener('timeupdate', () => {
+            if (bgAudio.currentTime >= bgAudio.duration - 1) { // jika lagu hampir habis
+                bgAudio.currentTime = 60; // kembali ke reff (sesuaikan angkanya)
+                bgAudio.play();
+            }
         });
     </script>
 </body>
