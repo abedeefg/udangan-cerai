@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Memulai Babak Baru — Aditya & Arini</title>
+    <title>Memulai Babak Baru — Lia & Rio</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link
@@ -396,8 +396,15 @@
                 musicBtn.classList.remove('animate-spin-slow');
                 isPlaying = false;
             } else {
+                // Pastikan audio siap sebelum mengubah waktunya
                 if (isFirstPlay) {
-                    bgAudio.currentTime = 60;
+                    if (bgAudio.readyState >= 1) {
+                        bgAudio.currentTime = 60; // GANTI ANGKA 60 INI SESUAI DETIK MULAI REFF
+                    } else {
+                        bgAudio.addEventListener('loadedmetadata', () => {
+                            bgAudio.currentTime = 60; // GANTI ANGKA 60 INI JUGA
+                        }, { once: true });
+                    }
                     isFirstPlay = false;
                 }
                 bgAudio.play().then(() => {
