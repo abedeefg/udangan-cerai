@@ -1,284 +1,351 @@
 <!DOCTYPE html>
 <html class="light" lang="id">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Memulai Babak Baru — Aditya & Arini</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "surface-bright": "#fefae0",
-          "on-background": "#1d1c0d",
-          "primary-container": "#2d3436",
-          "secondary-fixed": "#ffdcbd",
-          "error": "#ba1a1a",
-          "on-surface-variant": "#434749",
-          "error-container": "#ffdad6",
-          "on-tertiary-fixed": "#1a1d07",
-          "primary-fixed": "#dde4e6",
-          "surface-dim": "#dedbc2",
-          "on-tertiary-fixed-variant": "#45492f",
-          "on-primary-fixed": "#161d1f",
-          "primary": "#181f21",
-          "inverse-on-surface": "#f5f1d8",
-          "surface-cream": "#F9F7F2",
-          "primary-fixed-dim": "#c1c8ca",
-          "on-primary-fixed-variant": "#41484a",
-          "accent-soft-blue": "#A8DADC",
-          "secondary-container": "#ffca98",
-          "surface-container": "#f2efd5",
-          "surface-container-lowest": "#ffffff",
-          "surface-container-high": "#ede9cf",
-          "inverse-surface": "#323120",
-          "on-secondary-fixed": "#2c1600",
-          "tertiary-fixed-dim": "#c5c9a7",
-          "on-secondary-fixed-variant": "#623f18",
-          "on-secondary": "#ffffff",
-          "tertiary": "#1c2009",
-          "on-error": "#ffffff",
-          "tertiary-fixed": "#e1e6c2",
-          "secondary-fixed-dim": "#f0bd8b",
-          "on-error-container": "#93000a",
-          "inverse-primary": "#c1c8ca",
-          "tertiary-container": "#31351d",
-          "secondary": "#7d562d",
-          "on-tertiary": "#ffffff",
-          "surface-container-low": "#f8f4db",
-          "outline": "#747879",
-          "on-secondary-container": "#7a532a",
-          "on-primary": "#ffffff",
-          "background": "#fefae0",
-          "status-success": "#CCD5AE",
-          "on-surface": "#1d1c0d",
-          "on-tertiary-container": "#9a9e7e",
-          "surface-tint": "#586062",
-          "surface": "#fefae0",
-          "on-primary-container": "#959c9f",
-          "text-muted": "#636E72",
-          "surface-variant": "#e7e3ca",
-          "outline-variant": "#c3c7c8",
-          "surface-container-highest": "#e7e3ca"
-        },
-        "borderRadius": {
-          "DEFAULT": "0.25rem",
-          "lg": "0.5rem",
-          "xl": "0.75rem",
-          "full": "9999px"
-        },
-        "spacing": {
-          "container-margin": "32px",
-          "section-gap": "64px",
-          "gutter": "24px",
-          "card-padding": "24px",
-          "base": "8px"
-        },
-        "fontFamily": {
-          "body-lg": ["Inter"],
-          "headline-md": ["Manrope"],
-          "label-sm": ["Inter"],
-          "display-lg": ["Manrope"],
-          "label-md": ["Inter"],
-          "headline-lg-mobile": ["Manrope"],
-          "headline-lg": ["Manrope"],
-          "body-md": ["Inter"]
-        },
-        "fontSize": {
-          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-          "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-          "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-          "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Memulai Babak Baru — Aditya & Arini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fefae0",
+                        "on-background": "#1d1c0d",
+                        "primary-container": "#2d3436",
+                        "secondary-fixed": "#ffdcbd",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#434749",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1a1d07",
+                        "primary-fixed": "#dde4e6",
+                        "surface-dim": "#dedbc2",
+                        "on-tertiary-fixed-variant": "#45492f",
+                        "on-primary-fixed": "#161d1f",
+                        "primary": "#181f21",
+                        "inverse-on-surface": "#f5f1d8",
+                        "surface-cream": "#F9F7F2",
+                        "primary-fixed-dim": "#c1c8ca",
+                        "on-primary-fixed-variant": "#41484a",
+                        "accent-soft-blue": "#A8DADC",
+                        "secondary-container": "#ffca98",
+                        "surface-container": "#f2efd5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#ede9cf",
+                        "inverse-surface": "#323120",
+                        "on-secondary-fixed": "#2c1600",
+                        "tertiary-fixed-dim": "#c5c9a7",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#1c2009",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e1e6c2",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c1c8ca",
+                        "tertiary-container": "#31351d",
+                        "secondary": "#7d562d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f8f4db",
+                        "outline": "#747879",
+                        "on-secondary-container": "#7a532a",
+                        "on-primary": "#ffffff",
+                        "background": "#fefae0",
+                        "status-success": "#CCD5AE",
+                        "on-surface": "#1d1c0d",
+                        "on-tertiary-container": "#9a9e7e",
+                        "surface-tint": "#586062",
+                        "surface": "#fefae0",
+                        "on-primary-container": "#959c9f",
+                        "text-muted": "#636E72",
+                        "surface-variant": "#e7e3ca",
+                        "outline-variant": "#c3c7c8",
+                        "surface-container-highest": "#e7e3ca"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "32px",
+                        "section-gap": "64px",
+                        "gutter": "24px",
+                        "card-padding": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Manrope"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
         }
-      },
-    },
-  }
-</script>
-<style>
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  }
-  .fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
-    opacity: 0;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .image-reveal { animation: imageReveal 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-  @keyframes imageReveal {
-    from { clip-path: inset(100% 0 0 0); }
-    to   { clip-path: inset(0 0 0 0); }
-  }
-</style>
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .image-reveal {
+            animation: imageReveal 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes imageReveal {
+            from {
+                clip-path: inset(100% 0 0 0);
+            }
+
+            to {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+    </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed font-body-md overflow-x-hidden">
 
-<main class="min-h-screen flex flex-col items-center px-container-margin py-section-gap">
+<body
+    class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed font-body-md overflow-x-hidden">
 
-  <!-- Header Section -->
-  <header class="max-w-3xl w-full text-center mb-16 fade-in">
-    <span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4 block">Evently Management Presents</span>
-    <h1 class="font-headline-lg text-headline-lg md:text-display-lg font-bold text-primary mb-6">Memulai Babak Baru</h1>
-    <div class="h-px w-32 bg-outline-variant mx-auto"></div>
-  </header>
+    <main class="min-h-screen flex flex-col items-center px-container-margin py-section-gap">
 
-  <!-- Featured Image -->
-  <section class="max-w-4xl w-full mb-16 fade-in" style="animation-delay: 0.2s;">
-    <div class="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-xl">
-      <img
-        alt="Featured reflection image"
-        class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZtUA_9T3h7oKp4LPG7Q-yy14BcguBoJo0fEUSTnYGfmHxVxvIsN44C6OrrcWYEdPZy7eWufdv9GOcnsv443Is4CTrjcG5F276cV8GC5CCKL0BIxcX-Ig-DexGbXa2H0DcqdFCeTZksEcukxgtOtaJHxCdydXjs43F1Uiz6gNsIQwU58VU_dPrQ73Q09_P3Iv5ZVBzaV24uCKTMcyyKqUMXtoQUloK8aAWBrCJL4Adr8f5UgFmSL3SjE07Wxf9RaDwNUIhWCXPsp3l"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-    </div>
-  </section>
+        <!-- Header Section -->
+        <header class="max-w-3xl w-full text-center mb-16 fade-in">
+            <span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4 block">Evently
+                Management Presents</span>
+            <h1 class="font-headline-lg text-headline-lg md:text-display-lg font-bold text-primary mb-6">Memulai Babak
+                Baru</h1>
+            <div class="h-px w-32 bg-outline-variant mx-auto"></div>
+        </header>
 
-  <!-- Statement Canvas -->
-  <article class="max-w-2xl w-full bg-surface-container-lowest p-card-padding md:p-16 rounded-[2rem] shadow-sm border border-surface-variant/20 mb-16 fade-in" style="animation-delay: 0.4s;">
-    <div class="space-y-10">
-
-      <blockquote class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed text-center italic px-4">
-        "Ada saatnya sebuah simpul harus dilepaskan dengan penuh rasa hormat, agar masing-masing jiwa dapat menemukan kembali ketenangannya."
-      </blockquote>
-
-      <div class="py-10 border-y border-surface-variant/40 space-y-6">
-        <p class="font-body-md text-body-md text-on-surface leading-loose text-center">
-          Dengan penuh pertimbangan dan rasa hormat yang mendalam terhadap perjalanan yang telah kami lalui bersama, kami ingin menyampaikan bahwa kami telah sepakat untuk menempuh jalan yang berbeda.
-        </p>
-        <p class="font-body-md text-body-md text-on-surface leading-loose text-center">
-          Keputusan ini kami ambil demi kedamaian dan pertumbuhan diri masing-masing, dengan tetap menjaga silaturahmi yang baik dan saling menghargai.
-        </p>
-      </div>
-
-      <!-- Event Details -->
-      <div class="bg-surface-cream/50 p-8 rounded-2xl space-y-6 border border-surface-variant/10">
-        <h2 class="font-label-md text-label-md text-secondary font-bold text-center uppercase tracking-widest">Pertemuan Penutup &amp; Harapan</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-gutter">
-
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">calendar_today</span>
+        <!-- Featured Image -->
+        <section class="max-w-4xl w-full mb-16 fade-in" style="animation-delay: 0.2s;">
+            <div class="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-xl">
+                <img alt="Featured reflection image"
+                    class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZtUA_9T3h7oKp4LPG7Q-yy14BcguBoJo0fEUSTnYGfmHxVxvIsN44C6OrrcWYEdPZy7eWufdv9GOcnsv443Is4CTrjcG5F276cV8GC5CCKL0BIxcX-Ig-DexGbXa2H0DcqdFCeTZksEcukxgtOtaJHxCdydXjs43F1Uiz6gNsIQwU58VU_dPrQ73Q09_P3Iv5ZVBzaV24uCKTMcyyKqUMXtoQUloK8aAWBrCJL4Adr8f5UgFmSL3SjE07Wxf9RaDwNUIhWCXPsp3l" />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
-            <div>
-              <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">TANGGAL</p>
-              <p class="font-body-md text-body-md text-on-surface font-semibold">Sabtu, 14 September 2024</p>
+        </section>
+
+        <!-- Statement Canvas -->
+        <article
+            class="max-w-2xl w-full bg-surface-container-lowest p-card-padding md:p-16 rounded-[2rem] shadow-sm border border-surface-variant/20 mb-16 fade-in"
+            style="animation-delay: 0.4s;">
+            <div class="space-y-10">
+
+                <blockquote
+                    class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed text-center italic px-4">
+                    "Ada saatnya sebuah simpul harus dilepaskan dengan penuh rasa hormat, agar masing-masing jiwa dapat
+                    menemukan kembali ketenangannya."
+                </blockquote>
+
+                <div class="py-10 border-y border-surface-variant/40 space-y-6">
+                    <p class="font-body-md text-body-md text-on-surface leading-loose text-center">
+                        Dengan penuh pertimbangan dan rasa hormat yang mendalam terhadap perjalanan yang telah kami
+                        lalui bersama, kami ingin menyampaikan bahwa kami telah sepakat untuk menempuh jalan yang
+                        berbeda.
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface leading-loose text-center">
+                        Keputusan ini kami ambil demi kedamaian dan pertumbuhan diri masing-masing, dengan tetap menjaga
+                        silaturahmi yang baik dan saling menghargai.
+                    </p>
+                </div>
+
+                <!-- Event Details -->
+                <div class="bg-surface-cream/50 p-8 rounded-2xl space-y-6 border border-surface-variant/10">
+                    <h2
+                        class="font-label-md text-label-md text-secondary font-bold text-center uppercase tracking-widest">
+                        Pertemuan Penutup &amp; Harapan</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-gutter">
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+                                <span
+                                    class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">calendar_today</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">
+                                    TANGGAL</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">Sabtu, 14 September
+                                    2024</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+                                <span
+                                    class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">schedule</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">
+                                    WAKTU</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">16.00 - 18.00 WIB</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+                                <span
+                                    class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">location_on</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">
+                                    LOKASI</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">Ruang Tenang, Menteng
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+                                <span
+                                    class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">spa</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">
+                                    SUASANA</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">Seremonial Minimalis
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pt-6 text-center space-y-8">
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Kehadiran dan doa restu Anda sangat berarti bagi kami dalam melangkah menuju babak baru yang
+                        lebih tenang.
+                    </p>
+                    <div class="flex flex-col items-center gap-2">
+                        <p class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-surface-variant">Salam
+                            Hangat,</p>
+                        <p class="font-headline-md text-headline-lg text-primary font-bold">Lia &amp; Rio</p>
+                    </div>
+                </div>
+
             </div>
-          </div>
+        </article>
 
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">schedule</span>
+        <!-- Secondary Visual Grid -->
+        <section class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-gutter mb-section-gap fade-in"
+            style="animation-delay: 0.6s;">
+            <div
+                class="group aspect-[4/5] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <img alt="Moment of transition 1"
+                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuABQzV4mDvaJZMMINZ_rp_SiNlLsCCsAfid0uB-U8aTHJiyGisvRdDS0krWk1Bhr2FOl8Bm7XaAdfGNSFQXHXq2VO36LiTHwvbOpAhQZDQESUPLJLxV9rY5a0zFBQtFZgdT4UzZVIcCJke-Mn9eNrjvhLgMfuXHFt8jIH0sjgKbUXt0sxnnQIMdogkWtvBf5O9JuIsN4jRo70-Vkp-rWkQnEg7Zqp6SqxfqJfdyA7QuZUXek_jxxxEgPdOlx8BrwENh81ySr5y639F9" />
             </div>
-            <div>
-              <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">WAKTU</p>
-              <p class="font-body-md text-body-md text-on-surface font-semibold">16.00 - 18.00 WIB</p>
+            <div
+                class="group aspect-[4/5] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 md:mt-12">
+                <img alt="Moment of transition 2"
+                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9AGJke-4A8G3kI9YuwllCkHmPzRRtilOY-Oxp1KsVsHtEehRrdh-n3KlEsF1_JDFa4NJNbctZJTJXnciLxs3s3s5f_DqbJDAu_b3aOmylluP9DJoZu04Ln-qF-P5oQhRlIv8894SdyTBXZ5D4pLnCUjVuWcXgOUpzQi-ieTKI6gLWf-_qQHqmJx1JNuTEamrNqCunF6yJycSEDke3IO3LxsZOODSghXVq_M_gwZdrjQg0Xy0NHww6h2xacTWjrDX2A_wzdT287IpY" />
             </div>
-          </div>
+        </section>
 
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">location_on</span>
+        <!-- Video Section -->
+        <section class="max-w-4xl w-full mb-section-gap fade-in" style="animation-delay: 0.8s;">
+            <div
+                class="relative aspect-video rounded-3xl overflow-hidden shadow-xl bg-black border border-surface-variant/20">
+                <video class="w-full h-full" controls
+                    poster="https://lh3.googleusercontent.com/aida-public/AB6AXuABQzV4mDvaJZMMINZ_rp_SiNlLsCCsAfid0uB-U8aTHJiyGisvRdDS0krWk1Bhr2FOl8Bm7XaAdfGNSFQXHXq2VO36LiTHwvbOpAhQZDQESUPLJLxV9rY5a0zFBQtFZgdT4UzZVIcCJke-Mn9eNrjvhLgMfuXHFt8jIH0sjgKbUXt0sxnnQIMdogkWtvBf5O9JuIsN4jRo70-Vkp-rWkQnEg7Zqp6SqxfqJfdyA7QuZUXek_jxxxEgPdOlx8BrwENh81ySr5y639F9">
+                    <source src="1.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
             </div>
-            <div>
-              <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">LOKASI</p>
-              <p class="font-body-md text-body-md text-on-surface font-semibold">Ruang Tenang, Menteng</p>
-            </div>
-          </div>
+        </section>
 
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-on-secondary-fixed-variant text-[20px]">spa</span>
-            </div>
-            <div>
-              <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">SUASANA</p>
-              <p class="font-body-md text-body-md text-on-surface font-semibold">Seremonial Minimalis</p>
-            </div>
-          </div>
+        <!-- Footer -->
+        <footer
+            class="w-full py-12 px-container-margin border-t border-surface-variant/30 flex flex-col md:flex-row justify-between items-center gap-8 mt-auto">
+            <div class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Evently</div>
+            <nav class="flex gap-8">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Contact Us</a>
+            </nav>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Evently Management. All rights
+                reserved.</p>
+        </footer>
 
-        </div>
-      </div>
+    </main>
 
-      <div class="pt-6 text-center space-y-8">
-        <p class="font-body-md text-body-md text-on-surface-variant">
-          Kehadiran dan doa restu Anda sangat berarti bagi kami dalam melangkah menuju babak baru yang lebih tenang.
-        </p>
-        <div class="flex flex-col items-center gap-2">
-          <p class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-surface-variant">Salam Hangat,</p>
-          <p class="font-headline-md text-headline-lg text-primary font-bold">Aditya &amp; Arini</p>
-        </div>
-      </div>
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    </div>
-  </article>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
 
-  <!-- Secondary Visual Grid -->
-  <section class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-gutter mb-section-gap fade-in" style="animation-delay: 0.6s;">
-    <div class="group aspect-[4/5] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img
-        alt="Moment of transition 1"
-        class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXsFc6Fy-T9uUT_Rx2E0wzA9sBXSF_xmOXoTYsaCvB6AlGYLuX6qnF9cb5lclhZLO7JMT8fVHnjR4rJLaf8EGXqlv8ZoUG3vDv5mKZV_cCdUJ7o0rCpslwNCa8Z179H1LCkZZ0pB7mNXSynvf7pVyrq0_3qHWEVG1WFhFWezQwpRw0IWSbnjgSjfVR0lf4nitZ6TIgpQ-xMjY8TRatlZVa20GhRWheDUnHsj_BUMeKkB_W69uzeIcITLL8YHHaUS9yAqggLQtLadFh"
-      />
-    </div>
-    <div class="group aspect-[4/5] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 md:mt-12">
-      <img
-        alt="Moment of transition 2"
-        class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXsFc6Fy-T9uUT_Rx2E0wzA9sBXSF_xmOXoTYsaCvB6AlGYLuX6qnF9cb5lclhZLO7JMT8fVHnjR4rJLaf8EGXqlv8ZoUG3vDv5mKZV_cCdUJ7o0rCpslwNCa8Z179H1LCkZZ0pB7mNXSynvf7pVyrq0_3qHWEVG1WFhFWezQwpRw0IWSbnjgSjfVR0lf4nitZ6TIgpQ-xMjY8TRatlZVa20GhRWheDUnHsj_BUMeKkB_W69uzeIcITLL8YHHaUS9yAqggLQtLadFh"
-      />
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="w-full py-12 px-container-margin border-t border-surface-variant/30 flex flex-col md:flex-row justify-between items-center gap-8 mt-auto">
-    <div class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Evently</div>
-    <nav class="flex gap-8">
-      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
-      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
-      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Us</a>
-    </nav>
-    <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Evently Management. All rights reserved.</p>
-  </footer>
-
-</main>
-
-<script>
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.fade-in').forEach(el => {
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-  });
-</script>
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
 </body>
+
 </html>
