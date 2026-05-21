@@ -215,8 +215,8 @@
                             <div>
                                 <p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">
                                     TANGGAL</p>
-                                <p class="font-body-md text-body-md text-on-surface font-semibold">Sabtu, 14 September
-                                    2024</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">Sabtu, 27 September
+                                    2026</p>
                             </div>
                         </div>
 
@@ -388,31 +388,62 @@
         let isPlaying = false;
         let isFirstPlay = true;
 
-        musicBtn.addEventListener('click', () => {
+        const toggleMusic = () => {
             if (isPlaying) {
                 bgAudio.pause();
                 musicIcon.textContent = 'music_off';
                 musicRing.classList.add('hidden');
                 musicBtn.classList.remove('animate-spin-slow');
+                isPlaying = false;
             } else {
-                // Jika ini adalah putaran pertama, mulai dari detik reff
                 if (isFirstPlay) {
-                    // UBAH ANGKA 60 DI BAWAH INI sesuai dengan detik dimulainya reff lagu Anda
-                    bgAudio.currentTime = 60; 
+                    bgAudio.currentTime = 60;
                     isFirstPlay = false;
                 }
-                bgAudio.play();
-                musicIcon.textContent = 'music_note';
-                musicRing.classList.remove('hidden');
-                musicBtn.classList.add('animate-spin-slow');
+                bgAudio.play().then(() => {
+                    musicIcon.textContent = 'music_note';
+                    musicRing.classList.remove('hidden');
+                    musicBtn.classList.add('animate-spin-slow');
+                    isPlaying = true;
+                }).catch(() => {
+                    // Autoplay terblokir browser
+                });
             }
-            isPlaying = !isPlaying;
+        };
+
+        // Tombol toggle khusus diklik
+        musicBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Cegah event klik global bocor
+            toggleMusic();
         });
-        
-        // Agar loop mengulang dari reff lagi (bukan dari awal)
+
+        // Fungsi untuk Auto-play pertama kali
+        const autoPlayInteraction = () => {
+            if (!isPlaying && isFirstPlay) {
+                toggleMusic();
+            }
+            // Hapus event listener setelah interaksi pertama
+            document.removeEventListener('click', autoPlayInteraction);
+            document.removeEventListener('touchstart', autoPlayInteraction);
+            document.removeEventListener('scroll', autoPlayInteraction);
+        };
+
+        // Coba autoplay begitu halaman dimuat (biasanya ditolak Chrome/Safari tanpa interaksi)
+        window.addEventListener('DOMContentLoaded', () => {
+            if (isFirstPlay) {
+                toggleMusic();
+            }
+        });
+
+        // Trik: Jika autoplay diblokir, mulai otomatis saat tamu men-scroll, menyentuh, atau mengklik di mana saja
+        document.addEventListener('click', autoPlayInteraction);
+        document.addEventListener('touchstart', autoPlayInteraction, { once: true });
+        document.addEventListener('scroll', autoPlayInteraction, { once: true });
+
+        // Agar loop mengulang dari reff lagi
         bgAudio.addEventListener('timeupdate', () => {
-            if (bgAudio.currentTime >= bgAudio.duration - 1) { // jika lagu hampir habis
-                bgAudio.currentTime = 60; // kembali ke reff (sesuaikan angkanya)
+            if (bgAudio.currentTime >= bgAudio.duration - 1) {
+                bgAudio.currentTime = 60;
                 bgAudio.play();
             }
         });
